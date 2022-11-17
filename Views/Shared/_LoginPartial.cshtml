@@ -1,0 +1,9 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<ul class="navbar-nav">
+    <img 
+    style="width:40px;height:40px; object-fit:cover; border-radius:30px"
+    src="@UserManager.GetUserAsync(User).Result.ProfilePicture">
+</ul>
